@@ -1,0 +1,8 @@
+{
+    "indent_size": 4,
+    "indent_with_tabs": false,
+    "space_before_conditional": true,
+    "space_after_anon_function": false,
+    "keep_function_indentation": true,
+    "brace_style": "expand"
+}

@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Remove old minified version
+rm pandora.min.js
+
+# Package singletons
+cat pandora/singletons/Enums.js > build.js
+cat pandora/singletons/Easings.js >> build.js
+cat pandora/singletons/Collisions.js >> build.js
+
+# Package handlers
+cat pandora/handlers/GameHandler.js >> build.js
+cat pandora/handlers/AssetHandler.js >> build.js
+
+# Package components
+cat pandora/components/Component.js >> build.js
+cat pandora/components/Color.js >> build.js
+cat pandora/components/Vector2.js >> build.js
+cat pandora/components/Signal.js >> build.js
+cat pandora/components/Shape.js >> build.js
+cat pandora/components/Rect.js >> build.js
+cat pandora/components/Ellipse.js >> build.js
+
+# Package resources
+cat pandora/resources/Resource.js >> build.js
+cat pandora/resources/AudioRes.js >> build.js
+cat pandora/resources/FontRes.js >> build.js
+cat pandora/resources/TextureRes.js >> build.js
+cat pandora/resources/SpriteFrames.js >> build.js
+
+# Package GameObjects
+cat pandora/game_objects/GameObject.js >> build.js
+cat pandora/game_objects/AudioPlayer.js >> build.js
+cat pandora/game_objects/Timer.js >> build.js
+cat pandora/game_objects/Tween.js >> build.js
+
+# Package 2d Objects
+cat pandora/game_objects/2d_objects/Object2D.js >> build.js
+cat pandora/game_objects/2d_objects/Sprite2D.js >> build.js
+cat pandora/game_objects/2d_objects/AnimatedSprite2D.js >> build.js
+cat pandora/game_objects/2d_objects/Area2D.js >> build.js
+
+# Package UI Objects
+cat pandora/game_objects/ui_objects/UIObject.js >> build.js
+cat pandora/game_objects/ui_objects/Button.js >> build.js
+cat pandora/game_objects/ui_objects/CheckBox.js >> build.js
+cat pandora/game_objects/ui_objects/ColorPicker.js >> build.js
+cat pandora/game_objects/ui_objects/Input.js >> build.js
+cat pandora/game_objects/ui_objects/Label.js >> build.js
+cat pandora/game_objects/ui_objects/Radio.js >> build.js
+cat pandora/game_objects/ui_objects/Select.js >> build.js
+cat pandora/game_objects/ui_objects/Slider.js >> build.js
+
+# Uglify and remove temporary build file
+uglifyjs build.js --output pandora.min.js --compress --mangle
+rm build.js

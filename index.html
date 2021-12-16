@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alfabetiza</title>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- p5Js Modules -->
+    <script type="text/javascript" src="libraries/p5.min.js"></script>
+    <script type="text/javascript" src="libraries/p5.sound.min.js"></script>
+    <script type="text/javascript" src="libraries/p5.dom.min.js"></script>
+    
+    <!-- Pandora Engine -->
+    <script type="text/javascript" src="libraries/pandora.min.js"></script>
+
+    <!-- Game -->
+    <script type="text/javascript" src="src/elements/EelementSelector.js"></script>
+    <!-- Earth -->
+    <script type="text/javascript" src="src/elements/earth/EarthMinigameSelector.js"></script>
+    <!-- Food Hunt -->
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntMobileController.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntFruit.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntBasket.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntPlayer.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntTree.js"></script>
+    <script type="text/javascript" src="src/elements/earth/foodHunt/FoodHuntGame.js"></script>
+    <!-- Letter Hunt -->
+    <script type="text/javascript" src="src/elements/earth/letterHunt/LetterHuntDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/letterHunt/LetterHuntPlant.js"></script>
+    <script type="text/javascript" src="src/elements/earth/letterHunt/LetterHuntGame.js"></script>
+    <!-- Acrofony -->
+    <script type="text/javascript" src="src/elements/earth/acrofony/AcrofonyLevels.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/game/AcrofonyCardVisualEffect.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/game/AcrofonyOptionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/game/AcrofonyQuestionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/game/AcrofonyGameDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/game/AcrofonyGame.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/tutorial/AcrofonyTutorialDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/tutorial/AcrofonyTutorial.js"></script>
+    <script type="text/javascript" src="src/elements/earth/acrofony/AcrofonyLevelManager.js"></script>
+    <!-- Valise 1 -->
+    <script type="text/javascript" src="src/elements/earth/valise1/Valise1Levels.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/game/Valise1CardVisualEffect.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/game/Valise1OptionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/game/Valise1QuestionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/game/Valise1GameDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/game/Valise1Game.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/tutorial/Valise1TutorialDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/tutorial/Valise1Tutorial.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/level_selector/Valise1LevelButton.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise1/level_selector/Valise1LevelSelector.js"></script>
+    <!-- Valise 2 -->
+    <script type="text/javascript" src="src/elements/earth/valise2/Valise2Levels.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/game/Valise2CardVisualEffect.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/game/Valise2OptionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/game/Valise2QuestionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/game/Valise2GameDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/game/Valise2Game.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/tutorial/Valise2TutorialDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/tutorial/Valise2Tutorial.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/level_selector/Valise2LevelButton.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise2/level_selector/Valise2LevelSelector.js"></script>
+    <!-- Valise 3 -->
+    <script type="text/javascript" src="src/elements/earth/valise3/Valise3Levels.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/game/Valise3CardVisualEffect.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/game/Valise3OptionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/game/Valise3QuestionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/game/Valise3GameDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/game/Valise3Game.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/tutorial/Valise3TutorialDialogue.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/tutorial/Valise3Tutorial.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/level_selector/Valise3LevelButton.js"></script>
+    <script type="text/javascript" src="src/elements/earth/valise3/level_selector/Valise3LevelSelector.js"></script>
+    <!-- Rébus -->
+    <script type="text/javascript" src="src/elements/earth/rebus/RebusLevels.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/level_selector/RebusLevelButton.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/level_selector/RebusLevelSelector.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/game/RebusGameVisualEffects.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/game/RebusCardVisualEffect.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/game/RebusOptionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/game/RebusQuestionCard.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/game/RebusGame.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/tutorial/RebusTutorialVisualEffects.js"></script>
+    <script type="text/javascript" src="src/elements/earth/rebus/tutorial/RebusTutorial.js"></script>
+  </head>
+  
+  <body>
+    <script type="text/javascript" src="src/main.js"></script>
+  </body>
+</html>
